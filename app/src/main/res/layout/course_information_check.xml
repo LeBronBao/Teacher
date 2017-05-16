@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:divider="@drawable/divider_line"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <RelativeLayout
+            android:id="@+id/layout_course_info"
+            style="@style/coursen_information_check_rectangle_linear_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/course_info_check_rectangle_height">
+
+            <TextView
+                style="@style/left_info_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:text="课程信息" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical|right"
+                android:src="@drawable/ic_arrow_check" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_course_notice"
+            style="@style/coursen_information_check_rectangle_linear_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/course_info_check_rectangle_height">
+
+            <TextView
+                style="@style/left_info_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:text="课程公告" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical|right"
+                android:src="@drawable/ic_arrow_check" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layout_course_rank"
+            style="@style/coursen_information_check_rectangle_linear_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/course_info_check_rectangle_height">
+
+            <TextView
+                style="@style/left_info_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:text="课程评价" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical|right"
+                android:src="@drawable/ic_arrow_check" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_course_statistics"
+            style="@style/coursen_information_check_rectangle_linear_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/course_info_check_rectangle_height">
+
+            <TextView
+                style="@style/left_info_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:text="课程统计" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical|right"
+                android:src="@drawable/ic_arrow_check"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_class_management"
+            style="@style/coursen_information_check_rectangle_linear_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/course_info_check_rectangle_height">
+
+            <TextView
+                style="@style/left_info_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:text="班级管理" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical|right"
+                android:src="@drawable/ic_arrow_check"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_chapterCatalog"
+            style="@style/coursen_information_check_rectangle_linear_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/course_info_check_rectangle_height">
+
+            <TextView
+                style="@style/left_info_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:text="单元目录" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical|right"
+                android:src="@drawable/ic_arrow_check" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
+

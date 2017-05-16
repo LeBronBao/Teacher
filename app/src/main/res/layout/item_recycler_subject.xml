@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:elevation="5dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_item_lesson_seletion"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_menu_gallery"/>
+
+
+        <TextView
+            android:id="@+id/tv_item_selection_lesson_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="数据结构与算法"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_item_selection_lesson_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="15个课时"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:layout_margin="1dp"
+            android:id="@+id/tv_item_selection_lesson_numbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="159000人学习"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            />
+
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mrwen.activity">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/app_cover"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="爱就开心"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.example.mrwen.teacher"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginInActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".PersonInfoActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".CourseCheckActivity" />
+        <activity
+            android:name=".VideoActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".CourseEditActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".PersonInfoFillActivity" />
+        <activity android:name=".ChapterEditAcitvity" />
+        <activity android:name=".LessonEditAcitvity" />
+        <activity android:name=".LessonCheckActivity" />
+        <activity android:name=".VideoCheck" />
+        <activity android:name=".RanksActivity" />
+        <activity
+            android:name=".ContactActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PersonalInfoActivity" />
+        <activity android:name=".FriendRequestActivity" />
+        <activity
+            android:name=".SearchActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".QuestionActivity" />
+        <activity android:name=".WriteAnswerActivity" />
+        <activity android:name=".MyAnswersActivity" />
+        <activity
+            android:name=".ChatActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.example.mrwen.teacher"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.mrwen.activity.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/rc_file_path" />
+        </provider>
+
+        <activity android:name=".CourseInfoActivity" />
+        <activity android:name=".ClassListActivity" />
+        <activity android:name=".PassReviseActivity" />
+        <activity android:name=".ClassCheckActivity" />
+        <activity android:name=".StudentListActivity" />
+        <activity android:name=".AdminClassListActivity" />
+        <activity android:name=".StudyTimeLineActivity" />
+        <activity android:name=".StudyInfoToCourseInfo" />
+        <activity android:name=".StudyInfoToAnswer" />
+        <activity android:name=".ChapterListActivity" />
+        <activity android:name=".ChapterInfoActivity" />
+        <activity android:name=".GroupsActivity" />
+        <activity android:name=".CourseNoticeActivity" />
+        <activity android:name=".WriteNoticeActivity" />
+        <activity android:name=".TestActivity" />
+        <activity android:name=".MyClassActivity" />
+        <activity android:name=".ClassCreateActivity" />
+        <activity android:name=".StudentActivity" />
+        <activity android:name=".CollegeStudentActivity" />
+        <activity android:name=".StudentRequestActivity"/>
+    </application>
+
+</manifest>
