@@ -13,6 +13,7 @@ import com.example.mrwen.Utils.GlideCircleTransform;
 import com.example.mrwen.Utils.UiUtils;
 import com.example.mrwen.activity.R;
 import com.example.mrwen.bean.Student;
+import com.example.mrwen.bean.StudentAndStudy;
 import com.example.mrwen.view.OnChatListener;
 import com.example.mrwen.view.OnStudyInfoClickListener;
 import com.example.mrwen.view.OnUserInfoClickListener;

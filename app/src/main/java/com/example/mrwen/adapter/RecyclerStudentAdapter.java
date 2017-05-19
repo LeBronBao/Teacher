@@ -20,6 +20,8 @@ import com.example.mrwen.bean.Student;
 import com.example.mrwen.bean.StudentAndStudy;
 import com.example.mrwen.view.OnAddStudentClickListener;
 import com.example.mrwen.view.OnGetStudentInfoListener;
+import com.example.mrwen.view.OnStudyInfoClickListener;
+import com.example.mrwen.view.OnUserInfoClickListener;
 
 import java.util.ArrayList;
 
@@ -33,10 +35,16 @@ public class RecyclerStudentAdapter extends BaseRecyclerViewAdapter<StudentAndSt
     public RecyclerStudentAdapter(ArrayList<StudentAndStudy> data) {
         super(data);
     }
-    private OnGetStudentInfoListener onGetStudentInfoListener;
+    private OnStudyInfoClickListener onStudyInfoClickListener;
+    private OnUserInfoClickListener  onUserInfoClickListener;
 
-    public void setOnClickListener(OnGetStudentInfoListener onClickListener){
-        this.onGetStudentInfoListener = onClickListener;
+    //在Activity中调用，设置监听响应事件
+    public void setOnStudyInfoClickListener(OnStudyInfoClickListener onStudyInfoClickListener){
+        this.onStudyInfoClickListener = onStudyInfoClickListener;
+    }
+
+    public void setOnUserInfoClickListener(OnUserInfoClickListener onUserInfoClickListener){
+        this.onUserInfoClickListener = onUserInfoClickListener;
     }
 
     @Override
@@ -47,29 +55,42 @@ public class RecyclerStudentAdapter extends BaseRecyclerViewAdapter<StudentAndSt
 
     @Override
     public void onBindViewHolder(final RecyclerStudentAdapter.MyStudentViewHolder holder, int position) {
-        final StudentAndStudy student = data.get(position);
+        final ArrayList<Integer> idArray=new ArrayList<>();
+        final ArrayList<String> nameArray=new ArrayList<>();
+        for(StudentAndStudy s:data){
+            idArray.add(s.getId());
+            nameArray.add(s.getName());
+        }
+        final StudentAndStudy studentAndStudy = data.get(position);
 
         Glide.with(UiUtils.getContext())
-                .load(UiUtils.getContext().getResources().getString(R.string.baseURL) + student.getImageURL())
+                .load(UiUtils.getContext().getResources().getString(R.string.baseURL) + studentAndStudy.getImageURL())
                 .placeholder(R.drawable.ic_account_circle_blue_600_24dp)
                 .transform(new GlideCircleTransform(UiUtils.getContext()))
                 .into(holder.iv_student_image);
-        holder.tv_student_name.setText(student.getName());
-        holder.tv_student_gender.setText(student.getGender());
-        holder.tv_student_signature.setText(student.getSignature());
+        holder.tv_student_name.setText(studentAndStudy.getName());
+        holder.tv_student_gender.setText(studentAndStudy.getGender());
+        holder.tv_student_signature.setText(studentAndStudy.getSignature());
         holder.ll_student_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mListener!=null)
-                    mListener.onItemClick(v, student);
+                    mListener.onItemClick(v, studentAndStudy);
             }
         });
         holder.bt_more_student_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(onGetStudentInfoListener!=null) {
-                    onGetStudentInfoListener.onGetStudentInfoListener(student.getId());
+                if(onStudyInfoClickListener!=null) {
+                    onStudyInfoClickListener.onStudyInfoClickListener(studentAndStudy.getId(),studentAndStudy.getName(),idArray,nameArray);
                 }
+            }
+        });
+        holder.iv_student_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(onUserInfoClickListener!=null)
+                    onUserInfoClickListener.onUserInfoClickListener("s"+studentAndStudy.getId());
             }
         });
     }

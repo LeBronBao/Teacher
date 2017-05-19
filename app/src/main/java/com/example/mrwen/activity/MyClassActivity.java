@@ -155,6 +155,7 @@ public class MyClassActivity extends AppCompatActivity {
             mTvName.setText(StaticInfo.realname);
     }
 
+    //创建班级
     @OnClick({R.id.create_new_class})
     public void onClick(View view){
         switch (view.getId()){

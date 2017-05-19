@@ -5,9 +5,9 @@ package com.example.mrwen.otherclass;
  */
 
 public class LessonPartInfo {
-    int id;
-    String lessonName;
-    String index;
+    private int id;
+    private String lessonName;
+    private String index;
 
     public int getId() {
         return id;

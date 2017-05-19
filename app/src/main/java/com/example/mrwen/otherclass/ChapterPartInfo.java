@@ -5,11 +5,11 @@ package com.example.mrwen.otherclass;
  */
 
 public class ChapterPartInfo {
-    int id;
-    String index;
-    String name;
-    String lessonNumber;
-    int isSigned;
+    private int id;
+    private String index;
+    private String name;
+    private String lessonNumber;
+    private int isSigned;
 
     public String getIndex() {
         return index;

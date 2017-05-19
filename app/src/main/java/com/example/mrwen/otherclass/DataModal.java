@@ -9,13 +9,13 @@ import com.example.mrwen.bean.MessageRecord;
  * Created by ishratkhan on 24/02/16.
  */
 public class DataModal {
-    int level;
-    int type;
-    String name;
-    CourseLearning courseLearning;
-    Issue issue;
-    Answer answer;
-    MessageRecord messageRecord;
+    private int level;
+    private int type;
+    private String name;
+    private CourseLearning courseLearning;
+    private Issue issue;
+    private Answer answer;
+    private MessageRecord messageRecord;
 
     public DataModal(int level,int type,String name) {
         this.level = level;

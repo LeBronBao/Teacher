@@ -24,6 +24,8 @@ import com.example.mrwen.interfaces.InterfaceClass;
 import com.example.mrwen.interfaces.InterfaceTeacher;
 import com.example.mrwen.staticClass.StaticInfo;
 import com.example.mrwen.view.OnGetStudentInfoListener;
+import com.example.mrwen.view.OnStudyInfoClickListener;
+import com.example.mrwen.view.OnUserInfoClickListener;
 
 import java.util.ArrayList;
 
@@ -92,15 +94,30 @@ public class StudentActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //加载学生信息
     private void loadStudents(){
         adapter = new RecyclerStudentAdapter(new ArrayList<StudentAndStudy>());
         studentRecycler.setLayoutManager(new LinearLayoutManager(this));
         studentRecycler.setAdapter(adapter);
 
-        adapter.setOnClickListener(new OnGetStudentInfoListener() {
+        adapter.setOnStudyInfoClickListener(new OnStudyInfoClickListener() {
             @Override
-            public void onGetStudentInfoListener(int id) {
-                showStudentInfo(id);
+            public void onStudyInfoClickListener(int id, String name, ArrayList<Integer> idArray, ArrayList<String> nameArray) {
+                Intent intent=new Intent(StudentActivity.this,StudyTimeLineActivity.class);
+                intent.putExtra("studentId",id);
+                intent.putExtra("studentName",name);
+                intent.putExtra("idArray",idArray);
+                intent.putExtra("nameArray",nameArray);
+                startActivity(intent);
+            }
+        });
+
+        adapter.setOnUserInfoClickListener(new OnUserInfoClickListener() {
+            @Override
+            public void onUserInfoClickListener(String uid) {
+                Intent intent=new Intent(StudentActivity.this,PersonalInfoActivity.class);
+                intent.putExtra("uid",uid);
+                startActivity(intent);
             }
         });
 
@@ -125,6 +142,7 @@ public class StudentActivity extends AppCompatActivity {
         });
     }
 
+    //查看单个学生信息
     private void showStudentInfo(int id){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(getResources().getString(R.string.baseURL))
