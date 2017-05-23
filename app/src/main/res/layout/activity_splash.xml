@@ -16,7 +16,7 @@
             tools:ignore="UselessParent">
             <ImageView
                 android:id="@+id/iv_logo"
-                android:src="@drawable/logo"
+                android:src="@drawable/logo1"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginBottom="30dp"/>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools"  tools:ignore="ExtraTranslation">
     <string name="rc_name">RongCloud</string>
-
     <string name="rc_voice_dialog_swipe">Slide up to cancel</string>
     <string name="rc_voice_dialog_cancel_send">Release to cancel</string>
     <string name="rc_voice_dialog_time_short">Audio recorder short</string>
