@@ -3,10 +3,13 @@ package com.example.mrwen.interfaces;
 import com.example.mrwen.bean.Answer;
 import com.example.mrwen.bean.ChatGroup;
 import com.example.mrwen.bean.Exercise;
+import com.example.mrwen.bean.FillInBlankExercise;
 import com.example.mrwen.bean.FriendRequest;
 import com.example.mrwen.bean.Info;
 import com.example.mrwen.bean.InfoDetail;
+import com.example.mrwen.bean.Knowledge;
 import com.example.mrwen.bean.LoginInResult;
+import com.example.mrwen.bean.MultipleChoicesExercise;
 import com.example.mrwen.bean.QueryItem;
 import com.example.mrwen.bean.RegisterResult;
 import com.example.mrwen.bean.Result;
@@ -14,6 +17,7 @@ import com.example.mrwen.bean.RosterGroup;
 import com.example.mrwen.bean.UniversalResult;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import okhttp3.RequestBody;
@@ -106,7 +110,7 @@ public interface InterfaceTeacher {
     //修改密码
     @FormUrlEncoded
     @POST("servlet/PasswordRevise")
-    Call<UniversalResult> passwordRevise(@Field("uid")String uid ,@Field("password")String password );
+    Call<UniversalResult> passwordRevise(@Field("uid")String uid ,@Field("password")String password);
 
     //创建班级
     @POST("servlet/CreateClass")
@@ -123,7 +127,6 @@ public interface InterfaceTeacher {
     @FormUrlEncoded
     Call<UniversalResult> deleteStudentRequest(@FieldMap Map<String, String> map);
 
-
     //获取群组
     @GET("GetGroupsServlet")
     Call<ArrayList<ChatGroup>> getGroups(@Query("uid") String uid);
@@ -132,5 +135,53 @@ public interface InterfaceTeacher {
     @GET("servlet/GetTest")
     Call<ArrayList<Exercise>> getTest(@Query("tid") String tid);
 
+    //忘记密码时验证手机或邮箱
+    @FormUrlEncoded
+    @POST("servlet/VerifyPhoneOrEmailServlet")
+    Call<UniversalResult> verifyPhoneOrEmail(@Field("flag") int flag, @Field("username") String username, @Field("vrfInfo") String vrfInfo);
+
+    //通过认证后设置新密码
+    @FormUrlEncoded
+    @POST("servlet/NewPasswordServlet")
+    Call<UniversalResult> setNewPassword(@Field("username") String username, @Field("password") String password);
+
+    //上传知识图谱
+    @FormUrlEncoded
+    @POST("servlet/UploadKnowledgeServlet")
+    Call<UniversalResult> uploadKnowledge(@FieldMap Map<String, String> map);
+
+    //获取所有知识图谱
+    @GET("servlet/GetKnowledgeServlet")
+    Call<ArrayList<Knowledge>> getKnowledge();
+
+    //删除知识标签
+    @GET("servlet/DeleteKnowledgeServlet")
+    Call<UniversalResult> deleteKnowledge(@Query("kid") int id);
+
+    //获取特定知识图谱
+    @GET("servlet/GetKnowledgeByInfo")
+    Call<ArrayList<Knowledge>> getKnowledgeByInfo(@Query("grade") int grade, @Query("subject") String subject);
+
+    //上传填空题
+    @FormUrlEncoded
+    @POST("servlet/UploadFillInBlankExercise")
+    Call<UniversalResult> uploadFillInBlankExercise(@FieldMap Map<String, String> map);
+
+    //上传选择题
+    @FormUrlEncoded
+    @POST("servlet/UploadMultipleChoicesExercise")
+    Call<UniversalResult> uploadMultipleChoicesExercise(@FieldMap Map<String, String> map);
+
+    //获取填空题
+    @GET("servlet/GetFillInBlankExercisesServlet")
+    Call<ArrayList<FillInBlankExercise>> getFillInBlankExercises();
+
+    //获取选择题
+    @GET("servlet/GetMultipleChoicesExercisesServlet")
+    Call<ArrayList<MultipleChoicesExercise>> getMultipleChoicesExercises();
+
+    //删除某道题目
+    @GET("servlet/DeleteExerciseServlet")
+    Call<UniversalResult> deleteExercise(@Query("eid") int id, @Query("type") int type);
 
 }

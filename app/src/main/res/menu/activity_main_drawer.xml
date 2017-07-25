@@ -13,9 +13,14 @@
             android:title="我的回答"/>
 
         <item
-        android:id="@+id/nav_setting"
-        android:icon="@drawable/ic_menu_manage"
-        android:title="用户设置"/>
+            android:id="@+id/nav_upload_exercise"
+            android:icon="@drawable/ic_menu_exercise"
+            android:title="上传练习"/>
+
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="用户设置"/>
 
         <item
             android:id="@+id/nav_login_out"
@@ -26,6 +31,7 @@
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="修改密码"/>
+
     </group>
 
     <item android:title="Communicate">

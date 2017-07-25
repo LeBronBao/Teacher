@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -45,6 +47,8 @@ public class RegisterActivity extends AppCompatActivity{
     EditText et_register_password_again;
     @Bind(R.id.bt_pwd_again_clear)
     Button bt_pwd_again_clear;
+    @Bind(R.id.tv_password_security_level)
+    TextView tv_password_security_level;
 
     String username;
     String password;
@@ -80,6 +84,31 @@ public class RegisterActivity extends AppCompatActivity{
             }
         });
 
+        //检测密码安全强度
+        et_password.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                int length = editable.length();
+                String password = editable.toString();
+                if(length>6&&length<10&&containsNumberOnly(password))
+                    tv_password_security_level.setText("简单");
+                else if((length>6&&length<10&&!containsNumberOnly(password))||(length>10&&containsNumberOnly(password)))
+                    tv_password_security_level.setText("中等");
+                else if(length>10&&!containsNumberOnly(password))
+                    tv_password_security_level.setText("复杂");
+            }
+        });
+
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,6 +120,15 @@ public class RegisterActivity extends AppCompatActivity{
         });
 
     }
+
+    private boolean containsNumberOnly(String password){
+        for(char c:password.toCharArray()){
+            if(c<'0'||c>'9')
+                return false;
+        }
+        return true;
+    }
+
     private void retrofitIsUsernameUnique(final String username,final String password){
         final MyDialog alertDialog=new MyDialog();
         Retrofit retrofit=new Retrofit.Builder()
@@ -103,8 +141,8 @@ public class RegisterActivity extends AppCompatActivity{
             @Override
             public void onResponse(Call<UniversalResult> call, Response<UniversalResult> response) {
                 if (response.body().getResultCode() == 1) {
-                    if(username.length()<8||username.length()>11)
-                        alertDialog.showAlertDialog(RegisterActivity.this,"请输入8-11位的用户名");
+                    if(username.length()<6||username.length()>16)
+                        alertDialog.showAlertDialog(RegisterActivity.this,"请输入6-16位的用户名");
                     else if(password.length()<6){
                         alertDialog.showAlertDialog(RegisterActivity.this,"请输入6位以上的密码");
                     }else if(password.equals(password_again)){

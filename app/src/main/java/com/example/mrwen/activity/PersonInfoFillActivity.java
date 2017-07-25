@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.mrwen.Utils.MD5Utils;
 import com.example.mrwen.Utils.PictureCut;
@@ -56,7 +57,7 @@ public class PersonInfoFillActivity extends AppCompatActivity {
     private String password;
     private String realname;
     private String gender;
-    private String rank;
+    private String grade;
     private String subject;
     private String phone;
     private String email;
@@ -69,8 +70,6 @@ public class PersonInfoFillActivity extends AppCompatActivity {
     //获取信息的控件
     private EditText et_realname;
     private Spinner sp_gender;
-    private EditText et_rank;
-    private EditText et_subject;
     private EditText et_phone;
     private EditText et_email;
     private EditText et_school;
@@ -79,6 +78,8 @@ public class PersonInfoFillActivity extends AppCompatActivity {
     private Spinner spinnerProvince;
     private Spinner spinnerCity;
     private Spinner spinnerArea;
+    private Spinner spinnerGrade;
+    private Spinner spinnerSubject;
 
     private ArrayAdapter<String> mCityAdapter;
     private ArrayAdapter<String> mAreaAdapter;
@@ -91,22 +92,22 @@ public class PersonInfoFillActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.person_infomation_edit);
         Intent lastIntent=getIntent();
-        username=lastIntent.getStringExtra("username");
-        password=lastIntent.getStringExtra("password");
+        username = lastIntent.getStringExtra("username");
+        password = lastIntent.getStringExtra("password");
 
-        et_realname=(EditText)findViewById(R.id.et_realname);
-        sp_gender=(Spinner)findViewById(R.id.sp_gender);
-        et_rank=(EditText)findViewById(R.id.et_rank);
-        et_subject=(EditText)findViewById(R.id.et_subject);
-        et_phone=(EditText) findViewById(R.id.et_phone);
-        et_email=(EditText) findViewById(R.id.et_email);
-        et_school=(EditText)findViewById(R.id.et_school);
-        tv_dialog=(TextView)findViewById(R.id.tv_signature);
-        bt_save=(Button)findViewById(R.id.bt_personInfoEditSave);
-        iv_photo=(ImageView)findViewById(R.id.iv_photo);
-        spinnerProvince=(Spinner)findViewById(R.id.sp_person_info_fill_province);
-        spinnerCity=(Spinner)findViewById(R.id.sp_person_info_fill_city);
-        spinnerArea=(Spinner)findViewById(R.id.sp_person_info_fill_area);
+        et_realname = (EditText)findViewById(R.id.et_realname);
+        sp_gender = (Spinner)findViewById(R.id.sp_gender);
+        et_phone = (EditText)findViewById(R.id.et_phone);
+        et_email = (EditText)findViewById(R.id.et_email);
+        et_school = (EditText)findViewById(R.id.et_school);
+        tv_dialog = (TextView)findViewById(R.id.tv_signature);
+        bt_save = (Button)findViewById(R.id.bt_personInfoEditSave);
+        iv_photo = (ImageView)findViewById(R.id.iv_photo);
+        spinnerProvince = (Spinner)findViewById(R.id.sp_person_info_fill_province);
+        spinnerCity = (Spinner)findViewById(R.id.sp_person_info_fill_city);
+        spinnerArea = (Spinner)findViewById(R.id.sp_person_info_fill_area);
+        spinnerSubject = (Spinner)findViewById(R.id.sp_subject);
+        spinnerGrade = (Spinner)findViewById(R.id.grade);
         initView();
 
         //点击编辑
@@ -130,10 +131,24 @@ public class PersonInfoFillActivity extends AppCompatActivity {
         bt_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                retrofitInfoUpload();
+                realname = et_realname.getText().toString();
+                school = et_school.getText().toString();
+                gender = sp_gender.getSelectedItem().toString();
+                region = spinnerProvince.getSelectedItem().toString()+"_"+spinnerCity.getSelectedItem().toString()+"_"+spinnerArea.getSelectedItem().toString();
+                grade = spinnerGrade.getSelectedItem().toString();
+                subject = spinnerSubject.getSelectedItem().toString();
+                phone = et_phone.getText().toString();
+                email = et_email.getText().toString();
+                signature = tv_dialog.getText().toString();
+                if(realname.equals("")||school.equals("")||phone.equals("")||email.equals("")){
+                    Toast.makeText(getApplicationContext(), "请完成信息填写后再提交", Toast.LENGTH_SHORT).show();
+                }else {
+                    retrofitInfoUpload();
+                }
             }
         });
     }
+
     //上传头像的retrofit请求
     private void retrofitImageUpload(){
         if(imageChange==1) {
@@ -168,10 +183,7 @@ public class PersonInfoFillActivity extends AppCompatActivity {
                 }
             });
         }
-        else
-            ;
     }
-
 
     //上传信息的retrofit请求
     private void retrofitInfoUpload(){
@@ -195,7 +207,6 @@ public class PersonInfoFillActivity extends AppCompatActivity {
                             .setPositiveButton("确认", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-
                                     Intent intentLoginIn=new Intent(PersonInfoFillActivity.this,LoginInActivity.class);
                                     startActivity(intentLoginIn);
                                     finish();
@@ -215,6 +226,7 @@ public class PersonInfoFillActivity extends AppCompatActivity {
         });
 
     }
+
     /**
      * 显示修改头像的对话框
      */
@@ -269,7 +281,6 @@ public class PersonInfoFillActivity extends AppCompatActivity {
             }
         }
     }
-
     /**
      * 裁剪图片方法实现
      *
@@ -296,10 +307,6 @@ public class PersonInfoFillActivity extends AppCompatActivity {
 
     /**
      * 保存裁剪之后的图片数据
-     *
-     * @param
-     *
-     * @param
      */
     protected void setImageToView(Intent data) {
         Bundle extras = data.getExtras();
@@ -314,16 +321,7 @@ public class PersonInfoFillActivity extends AppCompatActivity {
 
     //信息的提取赋值
     private Map<String,String> getInformation(){
-        realname=et_realname.getText().toString();
-        gender=sp_gender.getSelectedItem().toString();
-        region=spinnerProvince.getSelectedItem().toString()+"_"+spinnerCity.getSelectedItem().toString()+"_"+spinnerArea.getSelectedItem().toString();
-        rank=et_rank.getText().toString();
-        subject=et_subject.getText().toString();
-        phone=et_phone.getText().toString();
-        email=et_email.getText().toString();
-        signature=tv_dialog.getText().toString();
-        school=et_school.getText().toString();
-        if(signature=="点击编辑")
+        if(signature.equals("点击编辑"))
             signature="";
         //image=((BitmapDrawable) ((ImageView) iv_photo).getDrawable()).getBitmap();
         //Log.i("image",image.toString());
@@ -333,7 +331,7 @@ public class PersonInfoFillActivity extends AppCompatActivity {
         map.put("realname",realname);
         map.put("gender",gender);
         map.put("region",region);
-        map.put("rank",rank);
+        map.put("rank",grade);
         map.put("subject",subject);
         map.put("phone",phone);
         map.put("email",email);
@@ -349,6 +347,7 @@ public class PersonInfoFillActivity extends AppCompatActivity {
         spinnerCity.setAdapter(mCityAdapter);
         mAreaAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, new ArrayList<String>());
         spinnerArea.setAdapter(mAreaAdapter);
+
         spinnerProvince.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -385,8 +384,8 @@ public class PersonInfoFillActivity extends AppCompatActivity {
         provinceAdapter.addAll(flatList(mProvinces));
         provinceAdapter.notifyDataSetChanged();
     }
-    private void refreshAreaByCity(int position) {
 
+    private void refreshAreaByCity(int position) {
         Map<String, String> map = mCities.get(position);
         String cityID = map.get("id");
         List<String> areas = RegionDAO.getAreaByCity(cityID);
@@ -394,11 +393,9 @@ public class PersonInfoFillActivity extends AppCompatActivity {
         if (areas.size() != 0)
             mAreaAdapter.addAll(areas);
         mAreaAdapter.notifyDataSetChanged();
-
     }
 
     private int refreshCityByProvince(int position) {
-
         Map<String, String> map = mProvinces.get(position);
         mCities = RegionDAO.getCityByProvince(map.get("id"));
         mCityAdapter.clear();

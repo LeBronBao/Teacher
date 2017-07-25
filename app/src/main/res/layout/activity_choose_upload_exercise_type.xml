@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_high_red">
+
+        <Button
+            android:id="@+id/bt_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/rc_back_icon"/>
+
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginStart="120dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择题目类型"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_marginTop="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/bt_upload_multiple_choices_exercise"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/color_high_red"
+            android:text="上传选择题"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/bt_upload_fill_in_blank_exercise"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="上传填空题"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:background="@color/color_high_red"/>
+    </LinearLayout>
+
+</LinearLayout>

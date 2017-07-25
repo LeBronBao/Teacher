@@ -42,7 +42,7 @@ android {
 
 allprojects {
     repositories {
-        flatDir{
+        flatDir {
             dirs 'libs'
         }
         jcenter()
@@ -61,6 +61,8 @@ dependencies {
     compile project(':IMKit')
     compile project(':IMLib')
     compile project(':InitActivity')
+    //compile 'com.github.wseemann:FFmpegMediaMetadataRetriever:1.0.14'
+    compile(name: 'FFmpegMediaMetadataRetriever-1.0.14', ext: 'aar')
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:design:24.2.1'
     compile 'com.android.support:recyclerview-v7:24.2.1'
@@ -71,11 +73,10 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.squareup.retrofit2:converter-scalars:2.0.0-beta4'
     compile 'com.github.bumptech.glide:glide:3.7.0'
-    //compile 'com.github.wseemann:FFmpegMediaMetadataRetriever:1.0.14'
-    compile(name:'FFmpegMediaMetadataRetriever-1.0.14',ext:'aar')
     compile 'com.miguelcatalan:materialsearchview:1.4.0'
     compile 'com.ms-square:expandableTextView:0.1.4'
     compile 'com.lcodecorex:tkrefreshlayout:1.0.5'
     compile 'com.daimajia.swipelayout:library:1.2.0@aar'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
 }

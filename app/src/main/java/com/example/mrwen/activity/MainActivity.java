@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity
                             transaction.show(classFragment);
                         }
                         toolbar.getMenu().clear();
-                        toolbar.inflateMenu(R.menu.menu_create_new_course);
+                        toolbar.inflateMenu(R.menu.menu_refresh);
                         break;
                     case R.id.radioButton2:
                         if (questionFragment == null) {
@@ -153,6 +153,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
         switch (id){
             case R.id.refresh_fragment:
+                Intent refreshIntent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(refreshIntent);
                 return true;
             case R.id.action_my_contact:
                 Intent intentContact=new Intent(MainActivity.this,ContactActivity.class);
@@ -168,20 +170,20 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         if(id==R.id.nav_my_info){
-            Intent intentPersonInfo=new Intent(MainActivity.this,PersonInfoActivity.class);
+            Intent intentPersonInfo = new Intent(MainActivity.this,PersonInfoActivity.class);
             startActivityForResult(intentPersonInfo,0);
         } else if (id == R.id.nav_my_answer) {
-            Intent intentMyAnswer=new Intent(MainActivity.this,MyAnswersActivity.class);
+            Intent intentMyAnswer = new Intent(MainActivity.this,MyAnswersActivity.class);
             startActivity(intentMyAnswer);
         } else if (id == R.id.nav_setting) {
-            Intent intentSetting=new Intent(MainActivity.this,SettingActivity.class);
+            Intent intentSetting = new Intent(MainActivity.this,SettingActivity.class);
             startActivity(intentSetting);
         } else if (id == R.id.nav_login_out) {
-            Intent intentLogin=new Intent(MainActivity.this,LoginInActivity.class);
+            Intent intentLogin = new Intent(MainActivity.this,LoginInActivity.class);
             startActivity(intentLogin);
             finish();
         } else if (id == R.id.nav_manage) {
-            Intent intentPassRevise=new Intent(MainActivity.this,PassReviseActivity.class);
+            Intent intentPassRevise = new Intent(MainActivity.this,PassReviseActivity.class);
             startActivity(intentPassRevise);
             finish();
         } else if (id == R.id.nav_share) {
@@ -193,6 +195,10 @@ public class MainActivity extends AppCompatActivity
                 classIntent.putExtra("cid", 2);
                 startActivity(classIntent);
             }
+        }else if(id == R.id.nav_upload_exercise){
+            Intent uploadExerciseIntent = new Intent(MainActivity.this, ExerciseActivity.class);
+            startActivity(uploadExerciseIntent);
+            finish();
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

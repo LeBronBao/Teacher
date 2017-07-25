@@ -54,16 +54,19 @@
                 android:layout_width="120dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
                 android:gravity="center"
                 android:inputType="textPersonName"
                 android:textColor="#999999"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:hint="（必填）"/>
 
             <TextView
                 style="@style/left_info_text_style"
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:layout_marginLeft="200dp"
+                android:layout_marginStart="200dp"
                 android:text="性别" />
 
             <Spinner
@@ -128,17 +131,17 @@
 
             </LinearLayout>
 
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="35dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center_vertical">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
 
 
-        </RelativeLayout>
+            </RelativeLayout>
 
         </LinearLayout>
 
@@ -151,9 +154,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
                 android:text="学校" />
 
             <EditText
+                android:hint="（必填）"
                 android:id="@+id/et_school"
                 android:layout_width="300dp"
                 android:layout_height="45dp"
@@ -185,13 +190,15 @@
                     android:layout_height="35dp"
                     android:text="年级" />
 
-                <EditText
-                    android:id="@+id/et_rank"
-                    style="@style/gray_small_center_style"
-                    android:layout_width="wrap_content"
+
+                <Spinner
+                    android:id="@+id/sp_grade"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:ems="5" />
+                    android:entries="@array/grade"
+                    android:gravity="center">
+
+                </Spinner>
 
             </LinearLayout>
 
@@ -207,13 +214,14 @@
                     android:layout_height="35dp"
                     android:text="科目" />
 
-                <EditText
-                    android:id="@+id/et_subject"
-                    style="@style/gray_small_center_style"
-                    android:layout_width="wrap_content"
+                <Spinner
+                    android:id="@+id/sp_subject"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:ems="5" />
+                    android:entries="@array/subject"
+                    android:gravity="center">
+
+                </Spinner>
 
 
             </LinearLayout>
@@ -244,7 +252,8 @@
                 android:layout_weight="1"
                 android:ems="11"
                 android:gravity="center"
-                android:inputType="phone" />
+                android:inputType="phone"
+                android:hint="（必填，可用于找回密码）"/>
         </LinearLayout>
 
         <LinearLayout
@@ -271,7 +280,8 @@
                 android:layout_weight="1"
                 android:ems="15"
                 android:gravity="center"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:hint="（必填，可用于找回密码）"/>
 
 
         </LinearLayout>

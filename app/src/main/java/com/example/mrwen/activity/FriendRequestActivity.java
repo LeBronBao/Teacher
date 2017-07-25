@@ -78,10 +78,10 @@ public class FriendRequestActivity extends AppCompatActivity {
         reFriendRequest.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new RecyclerFriendRequestAdapter(new ArrayList<FriendRequest>());
         reFriendRequest.setAdapter(mAdapter);
-        final View dialogView = initDialogView();
         mAdapter.setOnAddFriendListener(new RecyclerFriendRequestAdapter.OnAddFriendListener() {
             @Override
             public void onAddFriend(final FriendRequest info, final RecyclerFriendRequestAdapter.MyViewHolder holder) {
+                final View dialogView = initDialogView();
                 mEtRemark.setText(info.getNickname());
                 new AlertDialog.Builder(FriendRequestActivity.this).setView(dialogView)
                         .setTitle("添加好友")

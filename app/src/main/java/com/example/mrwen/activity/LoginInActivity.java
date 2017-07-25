@@ -8,6 +8,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -51,7 +53,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LoginInActivity extends AppCompatActivity {
     private Button bt_loginIn;
-    private Button bt_forgetPass;
     private Button bt_register;
     private EditText et_username;
     private EditText et_password;
@@ -62,9 +63,12 @@ public class LoginInActivity extends AppCompatActivity {
     Button bt_login_username_clear;
     @Bind(R.id.bt_pwd_visible)
     Button bt_pwd_visible;
+    @Bind(R.id.bt_forgetPass)
+    Button bt_forgetPass;
 
     private String username;
     private String password;
+    private boolean isPasswordVisible = false;
 
     MyDialog alertDialog=new MyDialog();
     @Override
@@ -94,12 +98,26 @@ public class LoginInActivity extends AppCompatActivity {
             }
         });
 
-        //密码可见
+        //设置密码是否可见
         bt_pwd_visible.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                et_password.setTransformationMethod(null);
+                if(!isPasswordVisible){
+                    et_password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    isPasswordVisible = true;
+                }else{
+                    et_password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    isPasswordVisible = false;
+                }
+            }
+        });
 
+        //找回密码
+        bt_forgetPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent forgetPassIntent = new Intent(LoginInActivity.this, ForgetPasswordActivity.class);
+                startActivity(forgetPassIntent);
             }
         });
 
@@ -126,22 +144,26 @@ public class LoginInActivity extends AppCompatActivity {
                 call.enqueue(new Callback<LoginInResult>() {
                     @Override
                     public void onResponse(Call<LoginInResult> call, Response<LoginInResult> response) {
-                        final LoginInResult loginInResult = response.body();
-                        int resultCode = loginInResult.getResultCode();
+                        if(response.body()!=null){
+                            final LoginInResult loginInResult = response.body();
+                            int resultCode = loginInResult.getResultCode();
 
-                        switch (resultCode){
-                            case 0:
-                                alertDialog.showAlertDialog(LoginInActivity.this,"用户名不存在");
-                                break;
-                            case 1:
-                                alertDialog.showAlertDialog(LoginInActivity.this,"用户存在异常");
-                                break;
-                            case 2:
-                                alertDialog.showAlertDialog(LoginInActivity.this,"密码错误");
-                                break;
-                            default:
-                                Toast.makeText(LoginInActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
-                                loginInSucceed(loginInResult);
+                            switch (resultCode){
+                                case 0:
+                                    alertDialog.showAlertDialog(LoginInActivity.this,"用户名不存在");
+                                    break;
+                                case 1:
+                                    alertDialog.showAlertDialog(LoginInActivity.this,"用户存在异常");
+                                    break;
+                                case 2:
+                                    alertDialog.showAlertDialog(LoginInActivity.this,"用户名或密码错误");
+                                    break;
+                                default:
+                                    Toast.makeText(LoginInActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+                                    loginInSucceed(loginInResult);
+                            }
+                        }else{
+                            Toast.makeText(LoginInActivity.this, "服务器异常，请稍后重试", Toast.LENGTH_SHORT).show();
                         }
                     }
 
@@ -194,28 +216,31 @@ public class LoginInActivity extends AppCompatActivity {
         }
         StaticInfo.uid="t"+teacher.getId();
 
-        //获取加班请求数
-        Retrofit retrofit=new Retrofit.Builder()
-                .baseUrl(getResources().getString(R.string.baseURL))
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        final InterfaceClass getStuRequest = retrofit.create(InterfaceClass.class);
-        final Call<ArrayList<AddClassRequest>> call = getStuRequest.getStudentRequest(StaticInfo.classId);
-        call.enqueue(new Callback<ArrayList<AddClassRequest>>() {
-            @Override
-            public void onResponse(Call<ArrayList<AddClassRequest>> call, Response<ArrayList<AddClassRequest>> response) {
-                if(response.body()!=null){
-                    StaticInfo.studentRequestNumber = response.body().size();
-                    Toast.makeText(LoginInActivity.this, "学生加班请求："+StaticInfo.studentRequestNumber, Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(LoginInActivity.this, "获取学生加班请求失败", Toast.LENGTH_SHORT).show();
+        //当该教师拥有班级时才获取加班请求
+        if(StaticInfo.classNumber!=0){
+            Retrofit retrofit=new Retrofit.Builder()
+                    .baseUrl(getResources().getString(R.string.baseURL))
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+            final InterfaceClass getStuRequest = retrofit.create(InterfaceClass.class);
+            final Call<ArrayList<AddClassRequest>> call = getStuRequest.getStudentRequest(StaticInfo.classId);
+            call.enqueue(new Callback<ArrayList<AddClassRequest>>() {
+                @Override
+                public void onResponse(Call<ArrayList<AddClassRequest>> call, Response<ArrayList<AddClassRequest>> response) {
+                    if(response.body()!=null){
+                        StaticInfo.studentRequestNumber = response.body().size();
+                        Toast.makeText(LoginInActivity.this, "学生加班请求："+StaticInfo.studentRequestNumber, Toast.LENGTH_SHORT).show();
+                    }else{
+                        Toast.makeText(LoginInActivity.this, "获取学生加班请求失败", Toast.LENGTH_SHORT).show();
+                    }
                 }
-            }
-            @Override
-            public void onFailure(Call<ArrayList<AddClassRequest>> call, Throwable t) {
-                Toast.makeText(LoginInActivity.this, t.toString(), Toast.LENGTH_SHORT).show();
-            }
-        });
+                @Override
+                public void onFailure(Call<ArrayList<AddClassRequest>> call, Throwable t) {
+                    Toast.makeText(LoginInActivity.this, t.toString(), Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+
 
         storeInfo(StaticInfo.username,StaticInfo.password);
         RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
@@ -253,8 +278,6 @@ public class LoginInActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-
         RongIM.connect(StaticInfo.token, new RongIMClient.ConnectCallback() {
             @Override
             public void onTokenIncorrect() {
@@ -263,7 +286,6 @@ public class LoginInActivity extends AppCompatActivity {
 
             @Override
             public void onSuccess(String s) {
-
                 Intent intentMainActivity=new Intent(LoginInActivity.this,MainActivity.class);
                 intentMainActivity.putExtra("token",StaticInfo.token);
                 startActivity(intentMainActivity);
@@ -272,7 +294,7 @@ public class LoginInActivity extends AppCompatActivity {
 
             @Override
             public void onError(RongIMClient.ErrorCode errorCode) {
-                alertDialog.showAlertDialog(LoginInActivity.this,"连接融云服务器失败");
+                alertDialog.showAlertDialog(LoginInActivity.this,"连接云服务器失败");
             }
         });
     }
@@ -282,7 +304,8 @@ public class LoginInActivity extends AppCompatActivity {
         info.putString("username",username);
         info.putString("password",password);
         info.putBoolean("needlogin",false);
-        info.commit();
+        //info.commit();
+        info.apply();
     }
 
     private io.rong.imlib.model.UserInfo findUserByUid(String uid) {

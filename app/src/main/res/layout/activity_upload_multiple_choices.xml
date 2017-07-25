@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/upload_multiple_choices_exercise_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_high_red">
+
+            <Button
+                android:id="@+id/bt_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rc_back_icon"/>
+
+            <TextView
+                android:id="@+id/tv_label"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="120dp"
+                android:layout_marginStart="120dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择题上传"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/subject_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_choose_subject"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:gravity="center"
+                android:text="选择科目"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/sp_subject"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="180dp"
+                android:layout_marginStart="180dp"
+                android:layout_marginTop="4dp"
+                android:entries="@array/subject">
+
+            </Spinner>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/grade_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_choose_grade"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:gravity="center"
+                android:text="选择年级"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/sp_grade"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="180dp"
+                android:layout_marginStart="180dp"
+                android:layout_marginTop="4dp"
+                android:entries="@array/grade">
+
+            </Spinner>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/knowledge_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_choose_knowledge"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:gravity="center"
+                android:text="选择知识点"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/sp_knowledge"
+                android:layout_width="160dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="180dp"
+                android:layout_marginStart="180dp"
+                android:layout_marginTop="4dp">
+
+            </Spinner>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/question_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:gravity="center"
+                android:text="题干"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_question"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="20dp"
+                android:hint="（必填）"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/answer1_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_answer1"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:gravity="center"
+                android:text="答案A"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_answer1"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:layout_marginStart="110dp"
+                android:hint="（必填）" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/answer2_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_answer2"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:gravity="center"
+                android:text="答案B"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_answer2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:layout_marginStart="110dp"
+                android:hint="（必填）" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/answer3_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_answer3"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:gravity="center"
+                android:text="答案C"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_answer3"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:layout_marginStart="110dp"
+                android:hint="（必填）" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/answer4_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_answer4"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:gravity="center"
+                android:text="答案D"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_answer4"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:layout_marginStart="110dp"
+                android:hint="（必填）" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/right_answer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_right_answer"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:gravity="center"
+                android:text="正确答案"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/sp_right_answer"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="140dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="4dp"
+                android:entries="@array/correct_answer">
+
+            </Spinner>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/analysis_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_analysis"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:gravity="center"
+                android:text="分析"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_analysis"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:layout_marginStart="110dp"
+                android:hint="（可选）" />
+
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:gravity="center"
+                android:text="图片"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_question_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="110dp"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="题干图片"
+                app:srcCompat="@drawable/ic_question_image_24dp"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:text="（点击上传题干图片，可选）"/>
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/bt_upload_multiple_choices_exercise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_low_red"
+            android:gravity="center"
+            android:text="上传题目"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

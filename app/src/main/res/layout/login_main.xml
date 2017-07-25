@@ -3,7 +3,8 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:fitsSystemWindows="true" >
+    android:fitsSystemWindows="true"
+    android:background="@color/white">
 
     <ImageView
         android:layout_width="180dp"
@@ -45,19 +46,18 @@
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="5dp"
-                android:inputType="number"
-                android:maxLength="11"
-                android:layout_weight="0.53">
-            </EditText>
+                android:layout_weight="0.53"
+                android:maxLength="12"/>
 
             <Button
                 android:id="@+id/bt_login_username_clear"
                 android:layout_width="23dp"
                 android:layout_height="23dp"
-                android:layout_gravity="right|center_vertical"
-                android:layout_marginRight="10dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:background="@drawable/ic_remove_blue_grey_300_18dp"
-                android:layout_weight="0.04" />
+                />
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
@@ -66,7 +66,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:weightSum="1">
-
 
             <TextView
                 android:id="@+id/tv_password"
@@ -83,25 +82,26 @@
                 android:id="@+id/password"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
+                android:layout_weight="0.70"
                 android:inputType="textPassword"
-                android:maxLength="11"
-                android:layout_weight="0.70">
-            </EditText>
+                android:maxLength="11"/>
 
             <Button
                 android:id="@+id/bt_pwd_visible"
                 android:layout_width="23dp"
                 android:layout_height="23dp"
                 android:background="@drawable/ic_visible_blue_grey_300_18dp"
-                android:layout_gravity="right|center_vertical"
+                android:layout_gravity="end|center_vertical"
                 />
+
             <Button
                 android:id="@+id/bt_login_pwd_remove"
                 android:layout_width="23dp"
                 android:layout_height="23dp"
                 android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
                 android:background="@drawable/ic_remove_blue_grey_300_18dp"
-                android:layout_gravity="right|center_vertical"
+                android:layout_gravity="end|center_vertical"
 
                 />
 

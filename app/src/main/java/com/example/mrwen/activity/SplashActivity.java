@@ -152,69 +152,71 @@ public class SplashActivity extends AppCompatActivity {
         call.enqueue(new Callback<LoginInResult>() {
             @Override
             public void onResponse(Call<LoginInResult> call, Response<LoginInResult> response) {
-                final LoginInResult loginInResult=response.body();
+                if (response.body() != null) {
+                    final LoginInResult loginInResult = response.body();
 
-                int resultCode=loginInResult.getResultCode();
-                if(StaticInfo.token==null){
-                    Intent intentLoginIn=new Intent(SplashActivity.this,LoginInActivity.class);
-                    startActivity(intentLoginIn);
-                }
+                    int resultCode = loginInResult.getResultCode();
+                    if (StaticInfo.token == null) {
+                        Intent intentLoginIn = new Intent(SplashActivity.this, LoginInActivity.class);
+                        startActivity(intentLoginIn);
+                    }
 
-                StaticInfo.token=response.body().getTeacher().getToken();
-                Teacher teacher=response.body().getTeacher();
-                switch (resultCode){
-                    case 0:
-                        alertDialog.showAlertDialog(SplashActivity.this,"用户名不存在");
-                        break;
-                    case 1:
-                        alertDialog.showAlertDialog(SplashActivity.this,"用户存在异常");
-                        break;
-                    case 2:
-                        alertDialog.showAlertDialog(SplashActivity.this,"密码错误");
-                        break;
-                    default:
-                        StaticInfo.imageURL = teacher.getImageURL();
-                        StaticInfo.realname = teacher.getRealname();
-                        StaticInfo.id = teacher.getId();
-                        StaticInfo.uid = "t" + teacher.getId();
-                        StaticInfo.token = teacher.getToken();
-                        StaticInfo.signature = teacher.getSignature();
-                        RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
-                            @Override
-                            public io.rong.imlib.model.UserInfo getUserInfo(String uid) {
-                                return findUserByUid(uid);
-                            }
-                        }, true);
-                        RongIM.setConversationBehaviorListener(new RongIM.ConversationBehaviorListener() {
-                            @Override
-                            public boolean onUserPortraitClick(Context context, Conversation.ConversationType type, io.rong.imlib.model.UserInfo info) {
-                                Intent intent = new Intent(context, PersonalInfoActivity.class);
-                                intent.putExtra("uid", info.getUserId());
-                                startActivity(intent);
-                                return false;
-                            }
+                    StaticInfo.token = response.body().getTeacher().getToken();
+                    Teacher teacher = response.body().getTeacher();
+                    switch (resultCode) {
+                        case 0:
+                            alertDialog.showAlertDialog(SplashActivity.this, "用户名不存在");
+                            break;
+                        case 1:
+                            alertDialog.showAlertDialog(SplashActivity.this, "用户存在异常");
+                            break;
+                        case 2:
+                            alertDialog.showAlertDialog(SplashActivity.this, "密码错误");
+                            break;
+                        default:
+                            StaticInfo.imageURL = teacher.getImageURL();
+                            StaticInfo.realname = teacher.getRealname();
+                            StaticInfo.id = teacher.getId();
+                            StaticInfo.uid = "t" + teacher.getId();
+                            StaticInfo.token = teacher.getToken();
+                            StaticInfo.signature = teacher.getSignature();
+                            RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
+                                @Override
+                                public io.rong.imlib.model.UserInfo getUserInfo(String uid) {
+                                    return findUserByUid(uid);
+                                }
+                            }, true);
+                            RongIM.setConversationBehaviorListener(new RongIM.ConversationBehaviorListener() {
+                                @Override
+                                public boolean onUserPortraitClick(Context context, Conversation.ConversationType type, io.rong.imlib.model.UserInfo info) {
+                                    Intent intent = new Intent(context, PersonalInfoActivity.class);
+                                    intent.putExtra("uid", info.getUserId());
+                                    startActivity(intent);
+                                    return false;
+                                }
 
-                            @Override
-                            public boolean onUserPortraitLongClick(Context context, Conversation.ConversationType type, io.rong.imlib.model.UserInfo info) {
-                                return false;
-                            }
+                                @Override
+                                public boolean onUserPortraitLongClick(Context context, Conversation.ConversationType type, io.rong.imlib.model.UserInfo info) {
+                                    return false;
+                                }
 
-                            @Override
-                            public boolean onMessageClick(Context context, View view, io.rong.imlib.model.Message message) {
-                                return false;
-                            }
+                                @Override
+                                public boolean onMessageClick(Context context, View view, io.rong.imlib.model.Message message) {
+                                    return false;
+                                }
 
-                            @Override
-                            public boolean onMessageLinkClick(Context context, String s) {
-                                return false;
-                            }
+                                @Override
+                                public boolean onMessageLinkClick(Context context, String s) {
+                                    return false;
+                                }
 
-                            @Override
-                            public boolean onMessageLongClick(Context context, View view, io.rong.imlib.model.Message message) {
-                                return false;
-                            }
-                        });
-                        connect();
+                                @Override
+                                public boolean onMessageLongClick(Context context, View view, io.rong.imlib.model.Message message) {
+                                    return false;
+                                }
+                            });
+                            connect();
+                    }
                 }
             }
 

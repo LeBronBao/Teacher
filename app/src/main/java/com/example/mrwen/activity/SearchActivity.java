@@ -97,7 +97,7 @@ public class SearchActivity extends AppCompatActivity {
     private void initView() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        final View dialogView = initDialogView();
+
         searchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -116,6 +116,7 @@ public class SearchActivity extends AppCompatActivity {
         mAdapter.setOnAddFriendListener(new RecyclerQueryContactAdapter.OnAddFriendListener() {
             @Override
             public void onAddFriend(final Info info, final RecyclerQueryResultAdapter.MyViewHolder holder) {
+                final View dialogView = initDialogView();
                 mEtRemark.setText(info.getNickname());
                 new AlertDialog.Builder(SearchActivity.this).setView(dialogView)
                         .setTitle("添加好友")

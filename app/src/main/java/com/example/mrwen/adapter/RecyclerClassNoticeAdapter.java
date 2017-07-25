@@ -65,6 +65,7 @@ public class RecyclerClassNoticeAdapter extends BaseRecyclerViewAdapter<Notice,R
 
 
     }
+
     public void remove(int id){
         for (Iterator it = data.iterator(); it.hasNext();) {
             Notice notice=(Notice) it.next();

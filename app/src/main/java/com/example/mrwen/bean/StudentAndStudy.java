@@ -5,15 +5,15 @@ package com.example.mrwen.bean;
  */
 
 public class StudentAndStudy {
-    int id;
-    String name;
-    String signature;
-    String imageURL;
-    String gender;
-    long duration;
-    int issueNum;
-    int answerNum;
-    int messageNum;
+    private int id;
+    private String name;
+    private String signature;
+    private String imageURL;
+    private String gender;
+    private long duration;
+    private int issueNum;
+    private int answerNum;
+    private int messageNum;
 
     public int getId() {
         return id;

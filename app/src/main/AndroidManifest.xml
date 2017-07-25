@@ -115,7 +115,22 @@
         <activity android:name=".ClassCreateActivity" />
         <activity android:name=".StudentActivity" />
         <activity android:name=".CollegeStudentActivity" />
-        <activity android:name=".StudentRequestActivity"/>
+        <activity android:name=".StudentRequestActivity" />
+        <activity android:name=".ForgetPasswordActivity" />
+        <activity android:name=".NewPasswordActivity" />
+        <activity android:name=".ExerciseActivity" />
+        <activity android:name=".KnowledgeUploadActivity" />
+        <activity
+            android:name=".KnowledgeManageActivity"
+            android:label="@string/title_activity_knowledge_manage" />
+        <activity android:name=".ExerciseUploadActivity" />
+        <activity
+            android:name=".UploadFillInBlankExerciseActivity"
+            android:label="@string/title_activity_upload_fill_in_blank_exercise" />
+        <activity
+            android:name=".UploadMultipleChoicesActivity"
+            android:label="@string/title_activity_upload_multiple_choices" />
+        <activity android:name=".ExerciseManageActivity"></activity>
     </application>
 
 </manifest>

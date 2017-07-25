@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_high_red">
+
+        <Button
+            android:id="@+id/bt_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/rc_back_icon"/>
+
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginStart="120dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="知识与题目"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/upload_exercise_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="120dp">
+
+        <Button
+            android:id="@+id/bt_add_new_knowledge"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/color_high_red"
+            android:text="新建知识图谱"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/bt_upload_exercise"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="上传题目"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:background="@color/color_high_red"/>
+
+        <Button
+            android:id="@+id/bt_manage_knowledge"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="管理知识图谱"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:background="@color/color_high_red"/>
+
+        <Button
+            android:id="@+id/bt_manage_exercise"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="管理题目"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:background="@color/color_high_red"/>
+
+    </LinearLayout>
+
+</LinearLayout>

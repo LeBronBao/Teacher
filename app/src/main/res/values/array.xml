@@ -20,4 +20,26 @@
         <item>八年级</item>
         <item>九年级</item>
     </string-array>
+    <string-array name="subject">
+        <item>语文</item>
+        <item>数学</item>
+        <item>英语</item>
+        <item>物理</item>
+        <item>化学</item>
+        <item>生物</item>
+        <item>历史</item>
+        <item>地理</item>
+        <item>政治</item>
+    </string-array>
+    <string-array name="correct_answer">
+        <item>选项A</item>
+        <item>选项B</item>
+        <item>选项C</item>
+        <item>选项D</item>
+    </string-array>
+    <string-array name="exercise_type">
+        <item>全部类型</item>
+        <item>选择题</item>
+        <item>填空题</item>
+    </string-array>
 </resources>

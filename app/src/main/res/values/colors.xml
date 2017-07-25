@@ -5,4 +5,5 @@
     <color name="color_low_red">#e47833</color>
     <color name="light_grey">#f1f1f1</color>
     <color name="color_red_main">#FF7F00</color>
+    <color name="white">#ffffff</color>
 </resources>
