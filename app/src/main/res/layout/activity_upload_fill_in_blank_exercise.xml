@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/upload_multiple_choices_exercise_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mrwen.activity.UploadFillInBlankExerciseActivity">
+    android:background="@color/light_grey"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,19 +25,18 @@
                 android:id="@+id/bt_back"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/rc_back_icon"/>
+                android:background="@drawable/rc_back_icon" />
 
             <TextView
                 android:id="@+id/tv_label"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="120dp"
-                android:layout_marginStart="120dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="5dp"
                 android:text="填空题上传"
-                android:textSize="25sp"
                 android:textColor="@color/white"
-                />
+                android:textSize="25sp" />
 
         </FrameLayout>
 
@@ -47,9 +50,9 @@
                 android:id="@+id/tv_choose_subject"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="4dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginTop="4dp"
                 android:gravity="center"
                 android:text="选择科目"
                 android:textColor="@android:color/black"
@@ -78,9 +81,9 @@
                 android:id="@+id/tv_choose_grade"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="4dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginTop="4dp"
                 android:gravity="center"
                 android:text="选择年级"
                 android:textColor="@android:color/black"
@@ -109,9 +112,9 @@
                 android:id="@+id/tv_choose_knowledge"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="4dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginTop="4dp"
                 android:gravity="center"
                 android:text="选择知识点"
                 android:textColor="@android:color/black"
@@ -139,10 +142,10 @@
                 android:id="@+id/tv_question"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:text="题干"
                 android:textColor="@android:color/black"
@@ -155,7 +158,7 @@
                 android:layout_marginLeft="110dp"
                 android:layout_marginStart="110dp"
                 android:layout_marginTop="20dp"
-                android:hint="（必填）"/>
+                android:hint="（必填）" />
 
         </FrameLayout>
 
@@ -182,7 +185,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="110dp"
                 android:layout_marginStart="110dp"
-                android:hint="（必填）"/>
+                android:hint="（必填）" />
 
         </FrameLayout>
 
@@ -212,7 +215,6 @@
                 android:hint="（可选）" />
 
 
-
         </FrameLayout>
 
         <FrameLayout
@@ -240,7 +242,7 @@
                 android:layout_marginStart="110dp"
                 android:layout_marginTop="5dp"
                 android:contentDescription="题干图片"
-                app:srcCompat="@drawable/ic_question_image_24dp"/>
+                android:src="@drawable/ic_upload_picture" />
 
             <TextView
                 android:layout_width="200dp"
@@ -248,8 +250,8 @@
                 android:layout_marginLeft="150dp"
                 android:layout_marginStart="150dp"
                 android:layout_marginTop="15dp"
-                android:textSize="15sp"
-                android:text="（点击上传题干图片，可选）"/>
+                android:text="（点击上传题干图片，可选）"
+                android:textSize="15sp" />
 
         </FrameLayout>
 
@@ -264,4 +266,4 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-</LinearLayout>
+</android.support.v4.widget.NestedScrollView>

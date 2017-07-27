@@ -57,6 +57,14 @@ public interface InterfaceTeacher {
     @POST("servlet/ImageUpload")
     Call<UniversalResult> imageUpload(@Part("fileName") String id, @Part("file\";filename=\"*.jpg") RequestBody image);
 
+    @Multipart
+    @POST("servlet/FillInBlankExerciseImageUpload")
+    Call<UniversalResult> fillInBlankExerciseImageUpload(@Part("fileName") String id, @Part("file\";filename=\"*.jpg") RequestBody image);
+
+    @Multipart
+    @POST("servlet/MultipleChoicesExerciseImageUpload")
+    Call<UniversalResult> multipleChoicesExerciseImageUpload(@Part("fileName") String id, @Part("file\";filename=\"*.jpg") RequestBody image);
+
     //接受好友请求
     @POST("AddFriendServlet")
     @FormUrlEncoded

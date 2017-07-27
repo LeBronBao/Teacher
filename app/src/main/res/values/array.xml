@@ -42,4 +42,12 @@
         <item>选择题</item>
         <item>填空题</item>
     </string-array>
+    <string-array name="knowledge_relations">
+        <item>包含于</item>
+        <item>包含</item>
+        <item>强相关于</item>
+        <item>弱相关于</item>
+        <item>相似于</item>
+        <item>相同于</item>
+    </string-array>
 </resources>

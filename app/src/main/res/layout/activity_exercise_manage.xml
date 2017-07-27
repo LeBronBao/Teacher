@@ -107,6 +107,17 @@
                 android:layout_marginStart="10dp"
                 android:entries="@array/subject" />
 
+            <Button
+                android:id="@+id/bt_reload_exercises"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:text="重新加载题目"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:background="@color/color_high_red" />
+
         </LinearLayout>
 
         <LinearLayout

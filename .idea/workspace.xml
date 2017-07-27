@@ -55,117 +55,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="RecyclerFillInBlankExerciseAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/adapter/RecyclerFillInBlankExerciseAdapter.java">
+      <file leaf-file-name="UploadMultipleChoicesActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/UploadMultipleChoicesActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="64" column="74" selection-start-line="64" selection-start-column="74" selection-end-line="64" selection-end-column="74" />
+            <state relative-caret-position="198">
+              <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="107" selection-end-column="65" />
+              <folding>
+                <element signature="method#loadKnowledgeByInfo#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+                <element signature="method#uploadMultipleChoicesExercise#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+                <element signature="method#getIntGrade#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+                <element signature="method#getKnowledgeLabel#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+                <element signature="method#formMap#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+                <element signature="method#getRightAnswerInt#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+                <element signature="method#showChoosePicDialog#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+                <element signature="method#onActivityResult#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+                <element signature="method#startPhotoZoom#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+                <element signature="method#setImageToView#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+                <element signature="method#retrofitImageUpload#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KnowledgeUploadActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/KnowledgeUploadActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+              <folding>
+                <element signature="method#uploadKnowledge#0;class#KnowledgeUploadActivity#0" expanded="false" />
+                <element signature="method#loadKnowledgeByInfo#0;class#KnowledgeUploadActivity#0" expanded="false" />
+                <element signature="e#7917#7959#0" expanded="true" />
+                <element signature="method#getKnowledgeLabel#0;class#KnowledgeUploadActivity#0" expanded="false" />
+                <element signature="method#getIntGrade#0;class#KnowledgeUploadActivity#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExerciseManageActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/ExerciseManageActivity.java">
+      <file leaf-file-name="array.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/array.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4375">
-              <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#deleteExercise#0;class#ExerciseManageActivity#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_choose_upload_exercise_type.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_choose_upload_exercise_type.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+            <state relative-caret-position="510">
+              <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_exercise_manage.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exercise_manage.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="148" column="8" selection-start-line="148" selection-start-column="8" selection-end-line="148" selection-end-column="8" />
-              <folding>
-                <element signature="e#644#1553#0" expanded="false" />
-                <element signature="e#1563#1823#0" expanded="false" />
-                <element signature="e#1833#3114#0" expanded="false" />
-                <element signature="e#1958#2330#0" expanded="false" />
-                <element signature="e#2344#2634#0" expanded="false" />
-                <element signature="e#2648#3089#0" expanded="false" />
-                <element signature="e#3124#3996#0" expanded="false" />
-                <element signature="e#4006#5344#0" expanded="false" />
-                <element signature="e#5354#5728#0" expanded="false" />
-                <element signature="e#6125#7072#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KnowledgeManageActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/KnowledgeManageActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="130" column="65" selection-start-line="130" selection-start-column="65" selection-end-line="130" selection-end-column="65" />
-              <folding>
-                <element signature="method#deleteKnowledge#0;class#KnowledgeManageActivity#0" expanded="false" />
-                <element signature="method#searchKnowledge#0;class#KnowledgeManageActivity#0" expanded="false" />
-                <element signature="method#getIntGrade#0;class#KnowledgeManageActivity#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_knowledge_manage.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_knowledge_manage.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="e#492#5802#0" expanded="false" />
-                <element signature="e#644#1553#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content_my_class.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_my_class.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="10" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecyclerMultipleChoicesExerciseAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/adapter/RecyclerMultipleChoicesExerciseAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1850">
-              <caret line="92" column="58" selection-start-line="92" selection-start-column="58" selection-end-line="92" selection-end-column="58" />
-              <folding>
-                <element signature="method#getGrade#0;class#RecyclerMultipleChoicesExerciseAdapter#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -176,8 +119,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="layoutResourceFile_vertical" />
         <option value="Class" />
+        <option value="layoutResourceFile_vertical" />
       </list>
     </option>
   </component>
@@ -4321,9 +4264,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_new_password.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/NewPasswordActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_forget_password.xml" />
@@ -4338,24 +4278,13 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/ExerciseUploadActitivy.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/SplashActivity.java" />
         <option value="G:/Android_SDK/platforms/android-23/android.jar!/android/os/Binder.class" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="G:/Android_SDK/sources/android-23/android/os/Binder.java" />
         <option value="G:/Android_SDK/sources/android-24/android/os/Binder.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/LoginInActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_upload_exercise.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_upload_knowledge.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/KnowledgeUploadActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/KnowledgeManageActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_choose_upload_exercise_type.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/ExerciseUploadActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_upload_fill_in_blank_exercise.xml" />
-        <option value="G:/Android_SDK/platforms/android-24/data/res/layout/simple_dropdown_item_1line.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/UploadFillInBlankExerciseActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/UploadMultipleChoicesActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_upload_multiple_choices.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/person_infomation_edit.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/PersonInfoFillActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/array.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_recycler_exercise.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/bean/FillInBlankExercise.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/bean/MultipleChoicesExercise.java" />
@@ -4364,14 +4293,28 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/view/OnCheckExerciseInfoClickListener.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/adapter/RecyclerFillInBlankExerciseAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/ExerciseActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/interfaces/InterfaceTeacher.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_recycler_fill_in_blank_exercise.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_recycler_multiple_choices_exercise.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/adapter/RecyclerMultipleChoicesExerciseAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/ExerciseManageActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_my_class.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_knowledge_manage.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/PersonInfoFillActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/KnowledgeManageActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_exercise_manage.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_upload_multiple_choices.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/interfaces/InterfaceTeacher.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/login_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_upload_fill_in_blank_exercise.xml" />
+        <option value="G:/Android_SDK/platforms/android-24/data/res/layout/simple_dropdown_item_1line.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/spinner_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/dropdown_style.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/ExerciseManageActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/UploadFillInBlankExerciseActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_upload_knowledge.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/UploadMultipleChoicesActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/KnowledgeUploadActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/array.xml" />
       </list>
     </option>
   </component>
@@ -4428,14 +4371,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
       <pane id="ProjectPane">
-        <subPane />
-      </pane>
-      <pane id="Scope" />
-      <pane id="Scratches">
         <subPane />
       </pane>
       <pane id="AndroidView">
@@ -4444,6 +4380,56 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Teacher2" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teacher2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teacher2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teacher2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -4511,6 +4497,13 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches">
+        <subPane />
       </pane>
     </panes>
   </component>
@@ -4910,7 +4903,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50117373" sideWeight="0.48918918" order="7" side_tool="false" content_ui="tabs" x="14" y="659" width="1904" height="300" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3943662" sideWeight="0.49351352" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15845071" sideWeight="0.49351352" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33154505" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298122" sideWeight="0.4967707" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.48918918" order="10" side_tool="false" content_ui="tabs" />
@@ -4938,8 +4931,8 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5023474" sideWeight="0.48918918" order="7" side_tool="false" content_ui="tabs" x="14" y="659" width="1904" height="300" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3943662" sideWeight="0.49351352" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50117373" sideWeight="0.48918918" order="7" side_tool="false" content_ui="tabs" x="14" y="659" width="1904" height="300" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1713615" sideWeight="0.49351352" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -4952,8 +4945,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33154505" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.48918918" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298122" sideWeight="0.4967707" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.48918918" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3274648" sideWeight="0.49567568" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.5043243" order="12" side_tool="true" content_ui="tabs" />
@@ -4982,196 +4975,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://G:/Android_SDK/platforms/android-24/android.jar!/android/os/Binder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1625">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://G:/Android_SDK/platforms/android-21/android.jar!/android/os/Binder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/Android_SDK/sources/android-24/android/os/Binder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/Android_SDK/sources/android-23/android/os/Binder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="287" column="29" selection-start-line="287" selection-start-column="29" selection-end-line="287" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/Android_SDK/sources/android-21/android/os/Binder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="54" column="82" selection-start-line="54" selection-start-column="82" selection-end-line="54" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/LoginInActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4375">
-          <caret line="224" column="87" selection-start-line="224" selection-start-column="87" selection-end-line="224" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/ChapterInfoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/interfaces/InterfaceClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/Android_SDK/platforms/android-24/data/res/layout/simple_dropdown_item_1line.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/apt/debug/com/example/mrwen/activity/UploadMultipleChoicesActivity$$ViewBinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_upload_multiple_choices.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="369" column="8" selection-start-line="369" selection-start-column="8" selection-end-line="369" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/RegisterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/register_main.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/person_infomation_edit.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="314" column="8" selection-start-line="314" selection-start-column="8" selection-end-line="314" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/PersonInfoFillActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="62" column="25" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/KnowledgeUploadActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="57" column="60" selection-start-line="57" selection-start-column="60" selection-end-line="57" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/array.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_recycler_group.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_recycler_friend_request.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_recycler_knowledge.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="78" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/ExerciseUploadActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="39" column="53" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/bean/FillInBlankExercise.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -5214,13 +5022,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/adapter/RecyclerKnowledgeAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="53" column="40" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/view/OnCheckExerciseInfoClickListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -5252,26 +5053,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_upload_fill_in_blank_exercise.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="125" column="46" selection-start-line="125" selection-start-column="46" selection-end-line="125" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_upload_knowledge.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_upload_exercise.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -5282,20 +5063,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/interfaces/InterfaceTeacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="184" column="88" selection-start-line="184" selection-start-column="88" selection-end-line="184" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/UploadMultipleChoicesActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="124" column="58" selection-start-line="124" selection-start-column="58" selection-end-line="124" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_recycler_multiple_choices_exercise.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -5303,13 +5070,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="94" selection-start-line="9" selection-start-column="94" selection-end-line="9" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/UploadFillInBlankExerciseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="116" column="60" selection-start-line="116" selection-start-column="60" selection-end-line="116" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -5330,21 +5090,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/adapter/RecyclerMultipleChoicesExerciseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1850">
-          <caret line="92" column="58" selection-start-line="92" selection-start-column="58" selection-end-line="92" selection-end-column="58" />
-          <folding>
-            <element signature="method#getGrade#0;class#RecyclerMultipleChoicesExerciseAdapter#0" expanded="false" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_my_class.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/adapter/RecyclerFillInBlankExerciseAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="64" column="74" selection-start-line="64" selection-start-column="74" selection-end-line="64" selection-end-column="74" />
-          <folding />
+        <state relative-caret-position="75">
+          <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -5355,18 +5107,70 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
           <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_my_class.xml">
-      <provider editor-type-id="android-designer2">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_question_image_24dp.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/staticClass/StaticInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="61" column="86" selection-start-line="61" selection-start-column="86" selection-end-line="61" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/Android_SDK/extras/android/m2repository/com/android/support/appcompat-v7/24.2.1/appcompat-v7-24.2.1-sources.jar!/android/support/v7/app/AlertDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="261" column="47" selection-start-line="261" selection-start-column="47" selection-end-line="261" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/adapter/RecyclerKnowledgeAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/Android_SDK/extras/android/m2repository/com/android/support/appcompat-v7/24.2.1/appcompat-v7-24.2.1-sources.jar!/android/support/v7/app/AppCompatDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/Android_SDK/extras/android/m2repository/com/android/support/appcompat-v7/24.2.1/appcompat-v7-24.2.1-sources.jar!/android/support/v7/app/AlertController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="213" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="10" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="430">
+          <caret line="134" column="52" selection-start-line="134" selection-start-column="52" selection-end-line="134" selection-end-column="52" />
+          <folding>
+            <element signature="e#855#1406#0" expanded="false" />
+            <element signature="e#1415#1748#0" expanded="false" />
+            <element signature="e#1757#1857#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -5377,10 +5181,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#492#5802#0" expanded="false" />
-            <element signature="e#644#1553#0" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/adapter/RecyclerFillInBlankExerciseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -5389,43 +5196,291 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="148" column="8" selection-start-line="148" selection-start-column="8" selection-end-line="148" selection-end-column="8" />
+        <state relative-caret-position="702">
+          <caret line="115" column="37" selection-start-line="115" selection-start-column="37" selection-end-line="115" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/Utils/PictureCut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="43" column="56" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/bean/UniversalResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/interfaces/InterfaceTeacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="63" column="14" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/LoginInActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="76" column="39" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/MyClassActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="259" column="40" selection-start-line="259" selection-start-column="40" selection-end-line="259" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_upload_fill_in_blank_exercise.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="128" column="47" selection-start-line="128" selection-start-column="47" selection-end-line="128" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/PersonInfoFillActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1575">
+          <caret line="105" column="67" selection-start-line="105" selection-start-column="67" selection-end-line="105" selection-end-column="67" />
           <folding>
-            <element signature="e#644#1553#0" expanded="false" />
-            <element signature="e#1563#1823#0" expanded="false" />
-            <element signature="e#1833#3114#0" expanded="false" />
-            <element signature="e#1958#2330#0" expanded="false" />
-            <element signature="e#2344#2634#0" expanded="false" />
-            <element signature="e#2648#3089#0" expanded="false" />
-            <element signature="e#3124#3996#0" expanded="false" />
-            <element signature="e#4006#5344#0" expanded="false" />
-            <element signature="e#5354#5728#0" expanded="false" />
-            <element signature="e#6125#7072#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#4341#4342#0" expanded="false" />
+            <element signature="e#4394#4395#0" expanded="false" />
+            <element signature="method#retrofitImageUpload#0;class#PersonInfoFillActivity#0" expanded="false" />
+            <element signature="method#retrofitInfoUpload#0;class#PersonInfoFillActivity#0" expanded="false" />
+            <element signature="method#showChoosePicDialog#0;class#PersonInfoFillActivity#0" expanded="false" />
+            <element signature="method#onActivityResult#0;class#PersonInfoFillActivity#0" expanded="false" />
+            <element signature="method#startPhotoZoom#0;class#PersonInfoFillActivity#0" expanded="false" />
+            <element signature="method#setImageToView#0;class#PersonInfoFillActivity#0" expanded="false" />
+            <element signature="method#getInformation#0;class#PersonInfoFillActivity#0" expanded="false" />
+            <element signature="method#refreshAreaByCity#0;class#PersonInfoFillActivity#0" expanded="false" />
+            <element signature="method#refreshCityByProvince#0;class#PersonInfoFillActivity#0" expanded="false" />
+            <element signature="method#flatList#0;class#PersonInfoFillActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/person_infomation_edit.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3025">
+          <caret line="121" column="21" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/Android_SDK/platforms/android-24/data/res/layout/simple_spinner_dropdown_item.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_item.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/Android_SDK/platforms/android-24/data/res/layout/simple_dropdown_item_1line.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dropdown_style.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/ExerciseManageActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+          <folding>
+            <element signature="e#2682#2683#0" expanded="false" />
+            <element signature="e#2722#2723#0" expanded="false" />
+            <element signature="e#3884#3885#0" expanded="false" />
+            <element signature="e#3934#3935#0" expanded="false" />
+            <element signature="method#loadFillInBlankExercises#0;class#ExerciseManageActivity#0" expanded="false" />
+            <element signature="method#searchExercises#0;class#ExerciseManageActivity#0" expanded="false" />
+            <element signature="method#deleteExercise#0;class#ExerciseManageActivity#0" expanded="false" />
+            <element signature="method#getMultipleChoicesExercise#0;class#ExerciseManageActivity#0" expanded="false" />
+            <element signature="method#getFillInBlankExercise#0;class#ExerciseManageActivity#0" expanded="false" />
+            <element signature="method#showAllExercises#0;class#ExerciseManageActivity#0" expanded="false" />
+            <element signature="method#getIntGrade#0;class#ExerciseManageActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/adapter/RecyclerMultipleChoicesExerciseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#4510#4511#0" expanded="false" />
+            <element signature="e#4564#4565#0" expanded="false" />
+            <element signature="method#getGrade#0;class#RecyclerMultipleChoicesExerciseAdapter#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/UploadFillInBlankExerciseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2500">
+          <caret line="144" column="64" selection-start-line="144" selection-start-column="64" selection-end-line="144" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3265#3266#0" expanded="false" />
+            <element signature="e#3305#3306#0" expanded="false" />
+            <element signature="e#4506#4507#0" expanded="false" />
+            <element signature="e#4559#4560#0" expanded="false" />
+            <element signature="method#loadKnowledgeByInfo#0;class#UploadFillInBlankExerciseActivity#0" expanded="false" />
+            <element signature="method#getIntGrade#0;class#UploadFillInBlankExerciseActivity#0" expanded="false" />
+            <element signature="method#getKnowledgeLabel#0;class#UploadFillInBlankExerciseActivity#0" expanded="false" />
+            <element signature="method#showChoosePicDialog#0;class#UploadFillInBlankExerciseActivity#0" expanded="false" />
+            <element signature="method#onActivityResult#0;class#UploadFillInBlankExerciseActivity#0" expanded="false" />
+            <element signature="method#startPhotoZoom#0;class#UploadFillInBlankExerciseActivity#0" expanded="false" />
+            <element signature="method#setImageToView#0;class#UploadFillInBlankExerciseActivity#0" expanded="false" />
+            <element signature="method#retrofitImageUpload#0;class#UploadFillInBlankExerciseActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_upload_multiple_choices.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="9" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_upload_knowledge.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="182" column="12" selection-start-line="182" selection-start-column="12" selection-end-line="182" selection-end-column="12" />
+          <folding>
+            <element signature="e#463#503#0" expanded="true" />
+            <element signature="e#1616#2703#0" expanded="false" />
+            <element signature="e#2713#3792#0" expanded="false" />
+            <element signature="e#3802#4874#0" expanded="false" />
+            <element signature="e#4884#5989#0" expanded="false" />
+            <element signature="e#9824#10239#0" expanded="false" />
+            <marker date="1501118689894" expanded="false" signature="724:1605" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/KnowledgeManageActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="130" column="65" selection-start-line="130" selection-start-column="65" selection-end-line="130" selection-end-column="65" />
+        <state relative-caret-position="-25">
+          <caret line="51" column="30" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/Android_SDK/sources/android-24/android/widget/Spinner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="511" column="16" selection-start-line="511" selection-start-column="16" selection-end-line="511" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/UploadMultipleChoicesActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="107" selection-end-column="65" />
           <folding>
-            <element signature="method#deleteKnowledge#0;class#KnowledgeManageActivity#0" expanded="false" />
-            <element signature="method#searchKnowledge#0;class#KnowledgeManageActivity#0" expanded="false" />
-            <element signature="method#getIntGrade#0;class#KnowledgeManageActivity#0" expanded="false" />
+            <element signature="method#loadKnowledgeByInfo#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+            <element signature="method#uploadMultipleChoicesExercise#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+            <element signature="method#getIntGrade#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+            <element signature="method#getKnowledgeLabel#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+            <element signature="method#formMap#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+            <element signature="method#getRightAnswerInt#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+            <element signature="method#showChoosePicDialog#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+            <element signature="method#onActivityResult#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+            <element signature="method#startPhotoZoom#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+            <element signature="method#setImageToView#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
+            <element signature="method#retrofitImageUpload#0;class#UploadMultipleChoicesActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/ExerciseManageActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4375">
-          <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mrwen/activity/KnowledgeUploadActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#deleteExercise#0;class#ExerciseManageActivity#0" expanded="false" />
+            <element signature="method#uploadKnowledge#0;class#KnowledgeUploadActivity#0" expanded="false" />
+            <element signature="method#loadKnowledgeByInfo#0;class#KnowledgeUploadActivity#0" expanded="false" />
+            <element signature="e#7917#7959#0" expanded="true" />
+            <element signature="method#getKnowledgeLabel#0;class#KnowledgeUploadActivity#0" expanded="false" />
+            <element signature="method#getIntGrade#0;class#KnowledgeUploadActivity#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/array.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>

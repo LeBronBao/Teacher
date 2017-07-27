@@ -354,7 +354,7 @@
                 android:layout_marginStart="110dp"
                 android:layout_marginTop="5dp"
                 android:contentDescription="题干图片"
-                app:srcCompat="@drawable/ic_question_image_24dp"/>
+                android:src="@drawable/ic_upload_picture"/>
 
             <TextView
                 android:layout_width="200dp"

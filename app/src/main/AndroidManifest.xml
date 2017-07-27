@@ -130,7 +130,9 @@
         <activity
             android:name=".UploadMultipleChoicesActivity"
             android:label="@string/title_activity_upload_multiple_choices" />
-        <activity android:name=".ExerciseManageActivity"></activity>
+        <activity
+            android:name=".ExerciseManageActivity"
+            android:label="ExerciseManageActivity"/>
     </application>
 
 </manifest>

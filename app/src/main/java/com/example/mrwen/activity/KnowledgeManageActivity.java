@@ -1,5 +1,6 @@
 package com.example.mrwen.activity;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.app.Activity;
@@ -131,7 +132,6 @@ public class KnowledgeManageActivity extends Activity {
                         recyclerView.setVisibility(View.VISIBLE);
                         adapter.setData(response.body());
                     }
-
                 }
             }
             @Override

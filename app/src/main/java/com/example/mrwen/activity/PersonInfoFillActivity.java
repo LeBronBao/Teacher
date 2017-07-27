@@ -200,7 +200,8 @@ public class PersonInfoFillActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<RegisterResult> call, Response<RegisterResult> response) {
                 if(response.body().getResultCode()==1){
-                    StaticInfo.id=response.body().getId();
+                    //先完成信息的提交，再获取id来上传头像
+                    StaticInfo.id = response.body().getId();
                     retrofitImageUpload();
                     new AlertDialog.Builder(PersonInfoFillActivity.this).setTitle("提示")
                             .setMessage("注册成功")
