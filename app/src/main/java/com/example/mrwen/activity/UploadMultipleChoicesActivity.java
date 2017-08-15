@@ -56,6 +56,8 @@ public class UploadMultipleChoicesActivity extends Activity {
     Spinner sp_subject;
     @Bind(R.id.sp_knowledge)
     Spinner sp_knowledge;
+    @Bind(R.id.bt_choose_knowledge_question)
+    Button bt_choose_knowledge_question;
     @Bind(R.id.et_question)
     EditText et_question;
     @Bind(R.id.et_answer1)
@@ -87,7 +89,7 @@ public class UploadMultipleChoicesActivity extends Activity {
     private String answer4;
     private String rightAnswer;
     private String analysis;
-
+    
     private Bitmap photo;
     int imageChange=0;
 
@@ -111,6 +113,13 @@ public class UploadMultipleChoicesActivity extends Activity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        bt_choose_knowledge_question.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "请选择最能细致地描述该题目的知识点，若无请选择最相近的知识点", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -153,7 +162,7 @@ public class UploadMultipleChoicesActivity extends Activity {
             @Override
             public void onClick(View v) {
                 grade = getIntGrade(sp_grade.getSelectedItem().toString());
-                subject = sp_grade.getSelectedItem().toString();
+                subject = sp_subject.getSelectedItem().toString();
                 if(sp_knowledge.getSelectedItem()==null){
                     knowledge = "";
                 }else{
@@ -334,6 +343,7 @@ public class UploadMultipleChoicesActivity extends Activity {
             public void onClick(DialogInterface dialog, int which) {
                 switch (which) {
                     case CHOOSE_PICTURE: // 选择本地照片
+
                         Intent openAlbumIntent = new Intent(
                                 Intent.ACTION_GET_CONTENT);
                         openAlbumIntent.setType("image/*");

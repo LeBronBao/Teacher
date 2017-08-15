@@ -102,4 +102,5 @@
     <string name="title_activity_upload_fill_in_blank_exercise">UploadFillInBlankExerciseActivity
     </string>
     <string name="title_activity_upload_multiple_choices">UploadMultipleChoicesActivity</string>
+    <string name="title_activity_knowledge_graph">KnowledgeGraphActivity</string>
 </resources>

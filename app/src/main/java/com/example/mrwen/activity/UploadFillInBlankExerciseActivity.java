@@ -57,6 +57,8 @@ public class UploadFillInBlankExerciseActivity extends Activity {
     Spinner sp_grade;
     @Bind(R.id.sp_knowledge)
     Spinner sp_knowledge;
+    @Bind(R.id.bt_choose_knowledge_question)
+    Button bt_choose_knowledge_question;
     @Bind(R.id.et_question)
     EditText et_question;
     @Bind(R.id.et_answer)
@@ -103,6 +105,13 @@ public class UploadFillInBlankExerciseActivity extends Activity {
             }
         });
 
+        bt_choose_knowledge_question.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "请选择最能细致地描述该题目的知识点，若无请选择最相近的知识点", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         sp_grade.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -142,7 +151,7 @@ public class UploadFillInBlankExerciseActivity extends Activity {
             @Override
             public void onClick(View v) {
                 grade = getIntGrade(sp_grade.getSelectedItem().toString());
-                subject = sp_grade.getSelectedItem().toString();
+                subject = sp_subject.getSelectedItem().toString();
                 question = et_question.getText().toString();
                 answer = et_answer.getText().toString();
                 if(sp_knowledge.getSelectedItem()==null){
@@ -282,7 +291,7 @@ public class UploadFillInBlankExerciseActivity extends Activity {
         return map;
     }
 
-    //上传题目图片
+    //选择需要上传的题目图片
     protected void showChoosePicDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("上传题目图片");

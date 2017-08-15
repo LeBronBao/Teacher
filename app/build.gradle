@@ -47,6 +47,7 @@ allprojects {
         }
         jcenter()
         maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
+        maven { url "https://jitpack.io"}
     }
 }
 
@@ -79,4 +80,6 @@ dependencies {
     compile 'com.daimajia.swipelayout:library:1.2.0@aar'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    compile 'com.androidplot:androidplot-core:1.5.0'
+    compile 'com.github.lecho:hellocharts-android:v1.5.8'
 }

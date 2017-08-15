@@ -185,6 +185,7 @@ public class KnowledgeManageActivity extends Activity {
             recyclerView.setVisibility(View.VISIBLE);
             adapter.setData(tempList);
         }
+        Toast.makeText(getApplicationContext(), "搜索成功", Toast.LENGTH_SHORT).show();
     }
 
     private int getIntGrade(String grade){

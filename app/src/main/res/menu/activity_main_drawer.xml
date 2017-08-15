@@ -15,7 +15,7 @@
         <item
             android:id="@+id/nav_upload_exercise"
             android:icon="@drawable/ic_menu_exercise"
-            android:title="上传练习"/>
+            android:title="知识管理"/>
 
         <item
             android:id="@+id/nav_setting"

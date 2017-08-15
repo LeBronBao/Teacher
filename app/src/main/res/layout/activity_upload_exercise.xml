@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="120dp">
+        android:layout_marginTop="60dp">
 
         <Button
             android:id="@+id/bt_add_new_knowledge"
@@ -42,17 +42,17 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@color/color_high_red"
-            android:text="新建知识图谱"
+            android:text="新建知识点"
             android:textColor="@color/white"
             android:textSize="20sp"/>
 
         <Button
-            android:id="@+id/bt_upload_exercise"
+            android:id="@+id/bt_relate_knowledge"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:text="上传题目"
+            android:text="关联知识点"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:background="@color/color_high_red"/>
@@ -63,7 +63,29 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:text="管理知识图谱"
+            android:text="管理知识点"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:background="@color/color_high_red"/>
+
+        <Button
+            android:id="@+id/bt_show_knowledge_graph"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="查看知识图谱"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:background="@color/color_high_red"/>
+
+        <Button
+            android:id="@+id/bt_upload_exercise"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="上传题目"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:background="@color/color_high_red"/>

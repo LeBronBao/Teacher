@@ -8,6 +8,7 @@ import com.example.mrwen.bean.FriendRequest;
 import com.example.mrwen.bean.Info;
 import com.example.mrwen.bean.InfoDetail;
 import com.example.mrwen.bean.Knowledge;
+import com.example.mrwen.bean.KnowledgeRelationship;
 import com.example.mrwen.bean.LoginInResult;
 import com.example.mrwen.bean.MultipleChoicesExercise;
 import com.example.mrwen.bean.QueryItem;
@@ -16,6 +17,7 @@ import com.example.mrwen.bean.Result;
 import com.example.mrwen.bean.RosterGroup;
 import com.example.mrwen.bean.UniversalResult;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -191,5 +193,14 @@ public interface InterfaceTeacher {
     //删除某道题目
     @GET("servlet/DeleteExerciseServlet")
     Call<UniversalResult> deleteExercise(@Query("eid") int id, @Query("type") int type);
+
+    //上传知识点之间的联系
+    @FormUrlEncoded
+    @POST("servlet/UploadKnowledgeRelationServlet")
+    Call<UniversalResult> uploadKnowledgeRelation(@FieldMap Map<String, String> map);
+
+    //获取知识点的关联
+    @GET("servlet/GetKnowledgeRelationshipServlet")
+    Call<ArrayList<KnowledgeRelationship>> getKnowledgeRelationships();
 
 }

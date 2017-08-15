@@ -132,7 +132,11 @@
             android:label="@string/title_activity_upload_multiple_choices" />
         <activity
             android:name=".ExerciseManageActivity"
-            android:label="ExerciseManageActivity"/>
+            android:label="ExerciseManageActivity" />
+        <activity android:name=".KnowledgeRelationActivity" />
+        <activity
+            android:name=".KnowledgeGraphActivity"
+            android:label="@string/title_activity_knowledge_graph"></activity>
     </application>
 
 </manifest>
